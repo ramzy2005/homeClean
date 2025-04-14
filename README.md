@@ -1,3 +1,2 @@
-# HOME-CLEAN
- This is a home cleaning service house 
- call us for schedule
+# This is home clean site clone
+ getting practice with React Js 
