@@ -50,7 +50,7 @@ export default function CardService({ images, title, cleanerName, rating, button
                 {/* Slide Buttons */}
                 <button
                     onClick={slidePrev}
-                    className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-200 text-Primary p-3 rounded-full hover:bg-gray-300 z-10"
+                    className=" absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-200 text-Primary p-3 rounded-full hover:bg-gray-300 z-10"
                 >
                     &#8249;
                 </button>

@@ -5,7 +5,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className=" mx-auto py-4 px-4 md:px-8 sticky top-0 bg-white z-10 ">
+            <nav className=" mx-auto py-4 px-4 md:px-8 sticky top-0 bg-white z-50 ">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <h1 className="text-2xl font-bold md:text-3xl">
