@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
-            <nav className=" mx-auto py-4 px-4 md:px-8 sticky top-0 bg-white z-50 ">
+            <nav className="mx-auto py-4 px-4 md:px-8 sticky top-0 bg-white z-50">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <h1 className="text-2xl font-bold md:text-3xl">
@@ -38,25 +39,24 @@ export default function Navbar() {
 
                     {/* Desktop Navigation Links */}
                     <div className="hidden lg:flex lg:space-x-10 lg:items-center">
-                        <a
-                            href="#"
+                        <Link
+                            to="/"
                             className="py-2 px-4 text-gray-700 hover:text-Primary"
                         >
-                            Residential Cleaning
-                        </a>
-                        
-                        <a
-                            href="#service"
+                            Home
+                        </Link>
+                        <Link
+                            to="/profile-creation"
+                            className="py-2 px-4 text-gray-700 hover:text-Primary"
+                        >
+                            Profile Creation
+                        </Link>
+                        <Link
+                            to="#service"
                             className="py-2 px-4 text-gray-700 hover:text-Primary"
                         >
                             Service
-                        </a>
-                        <a
-                            href="#work"
-                            className="py-2 px-4 text-gray-700 hover:text-Primary"
-                        >
-                            Commercial Cleaning
-                        </a>
+                        </Link>
                         <button className="border-2 border-Primary rounded-xl text-Primary px-4 py-2 hover:bg-Primary hover:text-white transition duration-300">
                             We're Cleaners!
                         </button>
@@ -66,24 +66,24 @@ export default function Navbar() {
                 {/* Mobile Menu */}
                 {isOpen && (
                     <div className="lg:hidden mt-4 bg-white/50 backdrop-blur-md shadow-md rounded-lg">
-                        <a
-                            href="#"
+                        <Link
+                            to="/"
                             className="block py-2 px-4 text-gray-700 hover:text-Primary border-b border-gray-200"
                         >
-                            Residential Cleaning
-                        </a>
-                        <a
-                            href="#"
+                            Home
+                        </Link>
+                        <Link
+                            to="/profile-creation"
                             className="block py-2 px-4 text-gray-700 hover:text-Primary border-b border-gray-200"
                         >
-                            Commercial Cleaning
-                        </a>
-                        <a
-                            href="#"
+                            Profile Creation
+                        </Link>
+                        <Link
+                            to="#service"
                             className="block py-2 px-4 text-gray-700 hover:text-Primary border-b border-gray-200"
                         >
                             Service
-                        </a>
+                        </Link>
                         <button className="block w-full border-2 border-Primary rounded-xl text-Primary px-4 py-2 mt-2 hover:bg-Primary hover:text-white transition duration-300">
                             We're Cleaners!
                         </button>
