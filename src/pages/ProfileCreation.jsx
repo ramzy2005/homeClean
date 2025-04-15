@@ -179,15 +179,15 @@ export default function ProfileCreation() {
                                     Please note that all boards you have created will be permanently erased.
                                 </p>
                             </div>
-                            <div className="flex space-x-2 mt-4">
+                            <div className="flex flex-col sm:flex-row sm:space-x-2 mt-4 space-y-2 sm:space-y-0">
                                 <button
-                                    className="px-16 py-1 rounded-lg bg-gray-200 hover:bg-gray-300 transition"
+                                    className="px-6 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition w-full sm:w-auto"
                                     onClick={() => setMessage("")}
                                 >
                                     Cancel
                                 </button>
                                 <button
-                                    className="px-16 py-1 rounded-lg bg-Primary text-white hover:bg-Primary/90 transition"
+                                    className="px-6 py-2 rounded-lg bg-Primary text-white hover:bg-Primary/90 transition w-full sm:w-auto"
                                     onClick={handleSave}
                                 >
                                     Save
@@ -216,13 +216,13 @@ export default function ProfileCreation() {
 
             {/* Pop-up Message */}
             {showPopup && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                    <div className="bg-gray-100 rounded-lg shadow-lg p-6 w-96">
-                        <h2 className="text-lg font-bold text-red-500 mb-4">Notice</h2>
-                        <p className="text-gray-700">{message}</p>
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4">
+                    <div className="bg-gray-100 rounded-lg shadow-lg p-6 w-full max-w-md">
+                        <h2 className="text-lg font-bold text-red-500 mb-4 text-center">Notice</h2>
+                        <p className="text-gray-700 text-center">{message}</p>
                         <div className="flex justify-end mt-4">
                             <button
-                                className="px-6 py-1 bg-red-500 text-white rounded-md hover:bg-red-700 transition"
+                                className="px-6 py-1 bg-red-500 text-white rounded-md hover:bg-red-700 transition w-full sm:w-auto"
                                 onClick={() => setShowPopup(false)}
                             >
                                 Close

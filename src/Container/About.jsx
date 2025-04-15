@@ -32,7 +32,7 @@ export default function About() {
 
     return (
         <>
-            <div id="About" className="mt-5 w-full px-16 flex flex-col items-center justify-between lg:space-x-10 py-10 md:px-8">
+            <div id="About" className="mt-5 w-full px-6 flex flex-col items-center justify-between lg:space-x-10 py-10 md:px-8">
                 <h1 className="text-3xl md:text-4xl text-Primary font-bold text-center mb-8">
                     Why Choose Cleaning Rabbit
                 </h1>
@@ -54,12 +54,12 @@ export default function About() {
                     <CardAbout2
                         image={about1}
                         title="Home Cleaning"
-                        icon={faArrowRight} // Updated icon
+                        icon={faArrowRight} 
                     />
                     <CardAbout2
                         image={about2}
                         title="Commercial Cleaning"
-                        icon={faArrowRight} // Updated icon
+                        icon={faArrowRight} 
                     />
                 </div>
             </div>
