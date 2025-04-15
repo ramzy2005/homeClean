@@ -32,7 +32,7 @@ export default function Services() {
                 // Scroll by 300px
                 scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
             }
-        }, 1000);
+        }, 2000);
 
         return () => clearInterval(interval); // cleanup interval on component unmount
     }, []);
