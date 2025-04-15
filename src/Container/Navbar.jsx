@@ -52,7 +52,7 @@ export default function Navbar() {
                             Profile Creation
                         </Link>
                         
-                        <button className="border-2 border-Primary rounded-xl text-Primary px-4 py-2 hover:bg-Primary hover:text-white transition duration-300">
+                        <button className="border-2 border-Primary rounded-xl text-Primary px-2 md:px-4 py-2 hover:bg-Primary hover:text-white transition duration-300">
                             We're Cleaners!
                         </button>
                     </div>
