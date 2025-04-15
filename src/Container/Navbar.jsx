@@ -47,14 +47,17 @@ export default function Navbar() {
                         </Link>
                         <Link
                             to="/profile-creation"
-                            className="py-2 px-4  text-gray-700 hover:text-Primary"
+                            className="py-2 px-4 text-gray-700 hover:text-Primary"
                         >
                             Profile Creation
                         </Link>
-                        
-                        <button className="border-2 border-Primary rounded-xl text-Primary px-2 md:px-4 py-2 hover:bg-Primary hover:text-white transition duration-300">
+
+                        <Link
+                            to="/we-are-cleaners"
+                            className="border-2 border-Primary rounded-xl text-Primary px-2 md:px-4 py-2 hover:bg-Primary hover:text-white transition duration-300"
+                        >
                             We're Cleaners!
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -73,10 +76,13 @@ export default function Navbar() {
                         >
                             Profile Creation
                         </Link>
-                        
-                        <button className="block w-full border-2 border-Primary rounded-xl text-Primary px-4 py-2 mt-2 hover:bg-Primary hover:text-white transition duration-300">
+
+                        <Link
+                            to="/we-are-cleaners"
+                            className="block w-full border-2 border-Primary rounded-xl text-Primary px-4 py-2 mt-2 hover:bg-Primary hover:text-white transition duration-300 text-center"
+                        >
                             We're Cleaners!
-                        </button>
+                        </Link>
                     </div>
                 )}
             </nav>

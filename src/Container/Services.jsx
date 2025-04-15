@@ -21,13 +21,15 @@ export default function Services() {
 
         const interval = setInterval(() => {
             if (scrollContainer.scrollLeft + scrollContainer.offsetWidth >= scrollContainer.scrollWidth) {
+                // Reset to the beginning when reaching the end
                 scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
             } else {
-                scrollContainer.scrollBy({ left: 100, behavior: "smooth" });
+                // Scroll by 300px
+                scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
             }
-        }, 10); 
+        }, 1000); 
 
-        return () => clearInterval(interval); // Cleanup interval on component unmount
+        return () => clearInterval(interval); // cleanup interval on component unmount
     }, []);
 
     return (
