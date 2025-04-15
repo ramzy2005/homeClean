@@ -1,17 +1,22 @@
 import { useEffect, useRef } from "react";
 import CardService from "../components/CardService";
-import cleaningImage from "../images/service1.jpg";
-import housekeepingImage from "../images/service2.jpg";
-import maidImage1 from "../images/service4.jpg";
-import maidImage2 from "../images/service5.jpg";
-import maidImage3 from "../images/service6.jpg";
-import maidImage4 from "../images/service7.jpg";
-import maidImage5 from "../images/service8.jpg";
 
 export default function Services() {
-    const allImages1 = [cleaningImage, housekeepingImage, maidImage1];
-    const allImages2 = [maidImage2, maidImage3, maidImage4];
-    const allImages3 = [maidImage5, cleaningImage, housekeepingImage];
+    const allImages1 = [
+        "https://media.gettyimages.com/id/1275938073/photo/senior-adult-janitor-mops-floor-at-entry-to-offices.jpg?s=612x612&w=0&k=20&c=p4iyUs9Fh_jo_viX2UcpQ9uHCQeKgrcpx6k37Fg1HB0=",
+        "https://media.gettyimages.com/id/530815822/photo/hispanic-woman-housekeeping.jpg?s=612x612&w=0&k=20&c=QDbfmECjDjtZvPIJ7n37oEq6MrRzgMbJ1tBBf6Q7u0c=",
+        "https://media.gettyimages.com/id/1369817617/photo/professional-housecleaner-at-work.jpg?s=612x612&w=0&k=20&c=_IPLZwsEEkgr9WmSYzyDw8LoJdlsImzybDmiXC5qdMw=",
+    ];
+    const allImages2 = [
+        "https://media.gettyimages.com/id/518333440/photo/office-cleaning-contractors.jpg?s=612x612&w=0&k=20&c=8L42nfzmz10Bge74TGq5ZR9HuW37Z-3izzHYzg-rAS8=",
+        "https://media.gettyimages.com/id/1423628232/photo/sanitation-worker-mopping-the-floor-in-the-classroom.jpg?s=612x612&w=0&k=20&c=J4c-tfQIZQI-UFodjZ_32kecZUU-g8kz772hLUGMnlM=",
+        "https://media.gettyimages.com/id/1369817796/photo/professional-housecleaner-at-work.jpg?s=612x612&w=0&k=20&c=Y49_yPCdWI9a94DYvn3SGUZGVBN8wErcEFJbcBnk7_U=",
+    ];
+    const allImages3 = [
+        "https://media.gettyimages.com/id/518332888/photo/office-cleaning-contractors.jpg?s=612x612&w=0&k=20&c=ZY3L2AhCPOxN7VL50ELYx2lE41VQ_n2-wnMvPFsTnx4=",
+        "https://media.gettyimages.com/id/1207800465/photo/maid-vacuuming-hotel-hallway.jpg?s=612x612&w=0&k=20&c=pEUr9coTgkpyOIhvb9E_Rg4CkJ1tEl-0iM2OrTzEqu0=",
+        "https://media.gettyimages.com/id/2190857608/photo/professional-housecleaners-in-a-home.jpg?s=612x612&w=0&k=20&c=mDTR9kkk8w4Xlo0Gzyh0CQxf7hjZ3DpJvreerRmhA8w=",
+    ];
 
     const scrollContainerRef = useRef(null);
 
@@ -27,7 +32,7 @@ export default function Services() {
                 // Scroll by 300px
                 scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
             }
-        }, 1000); 
+        }, 1000);
 
         return () => clearInterval(interval); // cleanup interval on component unmount
     }, []);
