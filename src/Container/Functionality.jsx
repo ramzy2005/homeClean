@@ -2,7 +2,7 @@ import CardFanctionality from "../components/CardFanctionality";
 
 export default function Fanctionality() {
     return (
-        <div id="work" className=" px-10 ">
+        <div id="work" className="px-4 md:px-10 ">
             <div className="p-6 md:px-10 lg:px-12 flex flex-col items-center  shadow-2xl rounded-2xl ">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
                 How It Works

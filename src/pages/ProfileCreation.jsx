@@ -113,7 +113,7 @@ export default function ProfileCreation() {
                                         onClick={() => setIsOpen(!isOpen)}
                                         className="w-full flex justify-between items-center border-2 border-gray-300 rounded-md shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
                                     >
-                                        Select a Service
+                                        {formData.service || "Select a Service"}
                                         <svg
                                             className={`h-5 w-5 transform transition-transform duration-300 ${
                                                 isOpen ? "rotate-180" : "rotate-0"
@@ -133,36 +133,22 @@ export default function ProfileCreation() {
                                     {isOpen && (
                                         <div className="absolute mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                                             <div className="py-1">
-                                                <a
-                                                    href="#"
-                                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                                >
-                                                    Residential Cleaning
-                                                </a>
-                                                <a
-                                                    href="#"
-                                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                                >
-                                                    Commercial Cleaning
-                                                </a>
-                                                <a
-                                                    href="#"
-                                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                                >
-                                                    Move-In/Move-Out Cleaning
-                                                </a>
-                                                <a
-                                                    href="#"
-                                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                                >
-                                                    Deep Cleaning
-                                                </a>
-                                                <a
-                                                    href="#"
-                                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                                >
-                                                    Post-Construction Cleaning
-                                                </a>
+                                                {["Residential Cleaning", "Commercial Cleaning", "Move-In/Move-Out Cleaning", "Deep Cleaning", "Post-Construction Cleaning"].map(
+                                                    (option) => (
+                                                        <a
+                                                            key={option}
+                                                            href="#"
+                                                            onClick={(e) => {
+                                                                e.preventDefault();
+                                                                setFormData({ ...formData, service: option });
+                                                                setIsOpen(false);
+                                                            }}
+                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                        >
+                                                            {option}
+                                                        </a>
+                                                    )
+                                                )}
                                             </div>
                                         </div>
                                     )}
@@ -171,7 +157,7 @@ export default function ProfileCreation() {
                         </div>
 
                         {/* Delete Your Account Section */}
-                        <div className="mt-8">
+                        <div className="mt-8 border-b-2 md:border-b-0  border-gray-400 pb-4">
                             <div className="text-start">
                                 <h1 className="text-Primary font-semibold">Delete your account</h1>
                                 <p className="text-sm text-gray-600">

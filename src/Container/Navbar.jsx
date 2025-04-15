@@ -38,25 +38,20 @@ export default function Navbar() {
                     </button>
 
                     {/* Desktop Navigation Links */}
-                    <div className="hidden lg:flex lg:space-x-10 lg:items-center">
+                    <div className="hidden lg:flex lg:space-x-5 lg:items-center">
                         <Link
                             to="/"
                             className="py-2 px-4 text-gray-700 hover:text-Primary"
                         >
-                            Home
+                            Commercial & Residential Cleaning
                         </Link>
                         <Link
                             to="/profile-creation"
-                            className="py-2 px-4 text-gray-700 hover:text-Primary"
+                            className="py-2 px-4  text-gray-700 hover:text-Primary"
                         >
                             Profile Creation
                         </Link>
-                        <Link
-                            to="#service"
-                            className="py-2 px-4 text-gray-700 hover:text-Primary"
-                        >
-                            Service
-                        </Link>
+                        
                         <button className="border-2 border-Primary rounded-xl text-Primary px-4 py-2 hover:bg-Primary hover:text-white transition duration-300">
                             We're Cleaners!
                         </button>
@@ -70,7 +65,7 @@ export default function Navbar() {
                             to="/"
                             className="block py-2 px-4 text-gray-700 hover:text-Primary border-b border-gray-200"
                         >
-                            Home
+                            Commercial & Residential Cleaning
                         </Link>
                         <Link
                             to="/profile-creation"
@@ -78,12 +73,7 @@ export default function Navbar() {
                         >
                             Profile Creation
                         </Link>
-                        <Link
-                            to="#service"
-                            className="block py-2 px-4 text-gray-700 hover:text-Primary border-b border-gray-200"
-                        >
-                            Service
-                        </Link>
+                        
                         <button className="block w-full border-2 border-Primary rounded-xl text-Primary px-4 py-2 mt-2 hover:bg-Primary hover:text-white transition duration-300">
                             We're Cleaners!
                         </button>

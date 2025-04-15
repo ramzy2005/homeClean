@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import CardService from "../components/CardService";
 import cleaningImage from "../images/service1.jpg";
 import housekeepingImage from "../images/service2.jpg";
@@ -12,6 +13,23 @@ export default function Services() {
     const allImages2 = [maidImage2, maidImage3, maidImage4];
     const allImages3 = [maidImage5, cleaningImage, housekeepingImage];
 
+    const scrollContainerRef = useRef(null);
+
+    useEffect(() => {
+        const scrollContainer = scrollContainerRef.current;
+        if (!scrollContainer) return;
+
+        const interval = setInterval(() => {
+            if (scrollContainer.scrollLeft + scrollContainer.offsetWidth >= scrollContainer.scrollWidth) {
+                scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+                scrollContainer.scrollBy({ left: 100, behavior: "smooth" });
+            }
+        }, 10); 
+
+        return () => clearInterval(interval); // Cleanup interval on component unmount
+    }, []);
+
     return (
         <div id="service" className="p-6 md:p-10 lg:p-12 flex flex-col items-center">
             <h1 className="text-3xl md:text-5xl font-bold text-center text-gray-800 mb-8">
@@ -19,6 +37,7 @@ export default function Services() {
             </h1>
 
             <div
+                ref={scrollContainerRef}
                 className="
                     flex md:grid 
                     grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
