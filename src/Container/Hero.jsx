@@ -18,7 +18,7 @@ export default function Hero() {
                         <input
                             type="text"
                             placeholder="Find the Cleaner"
-                            value={searchTerm}
+                
                             
                             className="w-full py-3 lg:py-3 px-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 ring-Primary shadow-md"
                         />
