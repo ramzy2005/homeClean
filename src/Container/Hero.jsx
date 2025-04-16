@@ -1,14 +1,8 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+
 import hero from "../images/hero.webp";
 
 export default function Hero() {
-    const [searchTerm, setSearchTerm] = useState(""); // State to store the search term
-    const navigate = useNavigate(); // Initialize useNavigate
-
-    const handleSearch = () => {
-        navigate("/book-now"); // Navigate to the "Book Now" page
-    };
+    
 
     return (
         <>
@@ -21,17 +15,14 @@ export default function Hero() {
                         Connect with trusted Cleaning professionals instantly. Book, chat, and pay securely, all in one place.
                     </p>
                     <div className="relative mt-4 lg:w-2/3">
-                        
                         <input
                             type="text"
                             placeholder="Find the Cleaner"
                             value={searchTerm}
-                            onClick={handleSearch} // Navigate to the "Book Now" page when clicked
-                            onChange={(e) => setSearchTerm(e.target.value)} // Update the search term
+                            
                             className="w-full py-3 lg:py-3 px-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 ring-Primary shadow-md"
                         />
                         <button
-                            onClick={handleSearch} // Trigger navigation on click
                             className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white bg-Primary hover:scale-75 p-2 rounded-full transition duration-300"
                         >
                             <svg
@@ -49,7 +40,6 @@ export default function Hero() {
                                 />
                             </svg>
                         </button>
-                        <link></link>
                     </div>
                 </div>
                 <div>
